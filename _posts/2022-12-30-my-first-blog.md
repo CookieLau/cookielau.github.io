@@ -1,3 +1,11 @@
+---
+layout: post
+mathjax: true
+title:  "Adding MathJax to a GitHub Pages Jekyll Blog"
+date:   2022-12-30 00:00:00 +0000
+categories: github jekyll
+---
+
 # Test
 
 [toc]
@@ -42,7 +50,9 @@ print(add(10))
 
 $$\frac{This is Latex}{a*b}$$
 
+# Testing out latex
 
+$$ \nabla_\boldsymbol{x} J(\boldsymbol{x}) $$
 
 
 
