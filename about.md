@@ -1,15 +1,23 @@
 ---
 layout: page
-title: About
+title: 💫 About me 💫
 ---
 
 Hi, there!
 
-I'm Cookie from China, currently a software/backend/machine learning engineer.      
-My interest covers C++, HPC, Large-scale training and Functional programming.        
-I'm a talkative man in the real world, so feel free to connect me via LinkedIn or Email.       
-Here I will record some courses I learned, some techniques I used, and some personal mind expression.     
+|My Info|🍪|
+|:-:|:-:|
+|Name|Cookie|
+|Nationality|China|
+|Job|(software/backend/machine learning) engineer|
+|Interest|C++, HPC, DDP, FP|
+|Personality|Outgoing, talkative, curious|
+|Contents|Courses, techniques and blogs|
 
-Anyway, if my blogs can help you, it's so great for me!
+```python
+if (my blogs help you) {
+  it is my pleasure ~
+}
+```
 
-Plus, I'm also building a [HPC-wiki website](https://hpc-wiki.org), if you are also interested in it, you are very welcomed to contribute to this project.
+**P.S.** I'm also building a [wiki of HPC](https://hpc-wiki.org), if you are also interested in it, you are very welcomed to contribute to this project.
