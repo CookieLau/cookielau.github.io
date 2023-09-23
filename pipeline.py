@@ -168,7 +168,7 @@ if __name__ == "__main__":
         logger.info("Inserted event %s", item['EventId'])
   
   logger.info("Generating table")
-  table = db.generate_non_expired_table()
+  table = "<h3>Last updated: {}</h3>".format(datetime.datetime.now()) + db.generate_non_expired_table()
   logger.info("Table generated")
 
   with open("template.html", "r") as f:
