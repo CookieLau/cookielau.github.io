@@ -71,6 +71,8 @@ jobs:
         with:
           fetch-depth: 0
           ref: nus_cfg
+      - name: Collect artifact components
+        shell: sh
         run: |
           mkdir _site
           mv index.html _site
