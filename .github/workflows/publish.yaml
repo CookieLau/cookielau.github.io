@@ -71,12 +71,15 @@ jobs:
         with:
           fetch-depth: 0
           ref: nus_cfg
+        run: |
+          mkdir _site
+          mv index.html _site
+          mv TableFilter.js _site
+          mv TableFilter.min.js _site
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
-        with:
-          path: ./index.html ./TableFilter.js ./TableFilter.min.js
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
