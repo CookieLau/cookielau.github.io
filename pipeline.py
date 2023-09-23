@@ -168,7 +168,9 @@ if __name__ == "__main__":
         logger.info("Inserted event %s", item['EventId'])
   
   logger.info("Generating table")
-  table = "<h3>Last updated: {}</h3>".format(datetime.datetime.now()) + db.generate_non_expired_table()
+  utcnow = datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc)
+  singapore_time = utcnow.astimezone(tz=datetime.timezone(datetime.timedelta(hours=8)))
+  table = "<h3>Last updated: {}</h3>".format(singapore_time) + db.generate_non_expired_table()
   logger.info("Table generated")
 
   with open("template.html", "r") as f:
@@ -177,7 +179,7 @@ if __name__ == "__main__":
   new_page = html_template.replace(REPLACE_WORD_FOR_TABLE_ITEMS, table)
 
   # set a new page with date and time
-  new_html_name = "output/output_" + str(datetime.datetime.now().date()) + "_" + str(datetime.datetime.now().time()).replace(":", "-") + ".html"
+  new_html_name = "output/output_" + str(singapore_time.date()) + "_" + str(datetime.datetime.now().time()).replace(":", "-") + ".html"
   with open(new_html_name, "w") as f:
       f.write(new_page)
   with open("index.html", "w") as f:
