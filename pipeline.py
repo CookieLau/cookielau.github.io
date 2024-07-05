@@ -59,7 +59,12 @@ def get_registration_ddl(item) -> str:
   if registration_ddl == "N/A":
     logger.error("Failed to get registration ddl for event id: %s", item['EventId'])
   elif registration_ddl != "None":
-    registration_ddl = datetime.datetime.strptime(registration_ddl, "%d %B %Y").date()
+    original_ddl = registration_ddl
+    try:
+      registration_ddl = datetime.datetime.strptime(registration_ddl, "%d %B %Y").date()
+    except Exception as e:
+      registration_ddl = original_ddl
+      print(e)
   return registration_ddl
 
 class EventDB(object):
